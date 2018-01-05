@@ -33,7 +33,7 @@ Puppet::Type.newtype(:concat_fragment) do
     end
   end
 
-  newparam(:source) do
+  newparam(:source, :array_matching => :all) do
     desc 'Source'
 
     validate do |value|
